@@ -6,10 +6,10 @@ import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useAuth } from "@clerk/nextjs"
 import { UserButton } from "@clerk/nextjs"
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetHeader, SheetTrigger,SheetTitle } from "@/components/ui/sheet"
 import { DarkModeToggle } from "../dark-mode-toggle"
 import MaxWidthWrapper from "./max-width-wrapper"
-import { DialogTitle } from "@radix-ui/react-dialog"
+
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard" },
@@ -66,7 +66,7 @@ export default function Navbar() {
             <SheetContent side="right" className="w-[250px] sm:w-[300px]">
               <SheetHeader>
                 <DarkModeToggle />
-                <DialogTitle className="sr-only">dark mode</DialogTitle>
+                <SheetTitle className="sr-only">dark mode</SheetTitle>
               </SheetHeader>
               <div className="flex flex-col mt-6">
                 {navigation.map((item) => (

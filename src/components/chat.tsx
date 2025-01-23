@@ -199,8 +199,8 @@ const Chat = ({
                     <AvatarImage
                       src={
                         msg.role === "assistant"
-                          ? "/ai-avatar.png"
-                          : "/user-avatar.png"
+                          ? "/user-ai.PNG"
+                          : "/user-avatar.PNG"
                       }
                     />
                     <AvatarFallback>

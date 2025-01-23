@@ -76,6 +76,7 @@ const About =  () => {
               alt="Language Learning"
               width={400}
               height={400}
+              priority
               className="w-full h-[400px] object-cover"
             />
           </div>
