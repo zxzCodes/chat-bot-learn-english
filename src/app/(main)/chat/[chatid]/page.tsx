@@ -9,10 +9,7 @@ import { Correction } from '@prisma/client'
 import { notFound} from 'next/navigation'
 import React from 'react'
 type ChatProps = {
-    params: {
-        chatid: string
-    }
-
+    params: Promise<{chatid: string}>
 }
 
 export default async  function ChatId({params}: ChatProps) {
