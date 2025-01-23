@@ -1,0 +1,56 @@
+import MaxWidthWrapper from "@/components/common/max-width-wrapper";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
+export default function Home() {
+  return (
+    <MaxWidthWrapper className="overflow-x-hidden mt-8 md:mt-12">
+      <section className="relative">
+        <div className="hidden sm:block absolute top-0 right-0 w-2/3 h-full bg-white dark:bg-gray-900 transform skew-x-12 translate-x-32 sm:translate-x-20 z-0" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 relative z-10">
+          <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
+            <div className="w-full md:w-1/2 space-y-4 sm:space-y-6 text-center md:text-left">
+              <Badge className="bg-orange-500/10 text-rose-500 hover:bg-rose-500/20 inline-flex">
+                AI-Powered Conversations
+              </Badge>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-indigo-900 dark:text-indigo-300 leading-tight">
+                Learn By{" "}
+                <span className="relative">
+                  <span className="relative z-10">Conversing</span>
+                  <span className="absolute bottom-2 left-0 w-full h-4 bg-orange-600/60 dark:bg-rose-500/30 -rotate-2" />
+                </span>
+              </h1>
+              <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 w-full md:max-w-md mx-auto md:mx-0">
+                Master any language naturally with our AI chatbots. Get instant
+                feedback as you write and chat.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
+                <Button className="w-full sm:w-auto bg-indigo-600 dark:bg-indigo-500 hover:bg-indigo-700 dark:hover:bg-indigo-600 transform hover:scale-105 transition-all shadow-lg">
+                  Start Chatting now
+                </Button>
+                <Button
+                  variant={"ghost"}
+                  className="w-full sm:w-auto text-indigo-700 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 hover:bg-transparent"
+                >
+                  <div className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center mr-2">
+                    ▶️
+                  </div>
+                  See how it works
+                </Button>
+              </div>
+            </div>
+
+            <Image
+              src="/lang.webp"
+              alt="classrooom"
+              width={400}
+              height={400}
+              className="relative z-10 rounded-2xl shadow-2xl transform hover:rotate-2 transition-transform duration-300 w-full"
+            />
+          </div>
+        </div>
+      </section>
+    </MaxWidthWrapper>
+  );
+}
